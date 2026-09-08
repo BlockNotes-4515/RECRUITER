@@ -106,3 +106,75 @@ Assessment
 Interview
     ↓
 Selected / Rejected
+
+```
+<hr>
+
+## RECRUITER
+
+<p align="center">
+  <img src="images/logo.jpg" alt="RECRUITER Logo" width="70">
+</p>
+
+<p align="center">
+  <strong>RECRUITER</strong>
+</p>
+
+<p align="center">
+  Modern recruitment intelligence dashboard for tracking companies,
+  opportunities, hiring pipelines, and recruitment analytics.
+</p>
+
+<p align="center">
+  <a href="#overview">
+    <img src="https://img.shields.io/badge/Project%20Overview-111827?style=for-the-badge" alt="Project Overview">
+  </a>
+  <a href="#features">
+    <img src="https://img.shields.io/badge/Features-2563EB?style=for-the-badge" alt="Features">
+  </a>
+  <a href="CONTRIBUTING.md">
+    <img src="https://img.shields.io/badge/Contribute-059669?style=for-the-badge" alt="Contribute">
+  </a>
+  <a href="SECURITY.md">
+    <img src="https://img.shields.io/badge/Security-DC2626?style=for-the-badge" alt="Security">
+  </a>
+</p>
+
+<p align="center">
+  <strong>Company Intelligence · Recruitment Tracking · Smarter Decisions</strong>
+</p>
+
+<p align="center">
+  Built as an evolving platform for smarter recruitment research,
+  opportunity management, and recruitment analytics.
+</p>
+
+<p align="center">
+  <sub>
+    This project is currently in its early development stage and will
+    continue to evolve through future releases and community contributions.
+  </sub>
+</p>
+
+<br>
+
+<p align="center">
+  <a href="CONTRIBUTING.md">Contribute</a>
+  &nbsp;·&nbsp;
+  <a href="SECURITY.md">Security</a>
+  &nbsp;·&nbsp;
+  <a href="#roadmap">Roadmap</a>
+  &nbsp;·&nbsp;
+  <a href="#discussions-and-ideas">Discussions</a>
+</p>
+
+<hr>
+
+<p align="center">
+  <strong>RECRUITER</strong><br>
+  Recruitment intelligence, organized.
+</p>
+
+<p align="center">
+  © 2026 RECRUITER. All rights reserved.
+</p>
