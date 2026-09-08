@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RECRUITER</title>
+
+    <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+
+    <meta name="description" content="RECRUITER — Track companies, opportunities, applications and recruitment intelligence.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================================================
+     BACKGROUND
+========================================================= -->
+
+    <div class="noise"></div>
+    <div class="grid-background"></div>
+
+    <!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+    <header class="navbar">
+
+        <div class="nav-inner">
+
+            <a href="#dashboard" class="brand">
+                <span class="brand-mark">
+    <img src="images/logo.jpg" alt="Recruiter Logo">
+</span>
+                <span>RECRUITER</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#dashboard">Dashboard</a>
+                <a href="#companies">Companies</a>
+                <a href="#analytics">Analytics</a>
+                <a href="#privacy">Privacy Policy</a>
+            </nav>
+
+            <button class="nav-button" onclick="openModal()">
+            <span>+</span>
+            Add Company
+        </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+     HERO
+========================================================= -->
+
+    <main>
+
+        <section class="hero" id="dashboard">
+
+            <div class="hero-grid">
+
+                <div class="hero-content">
+
+                    <div class="eyebrow">
+                        <span class="status-dot"></span> RECRUITMENT WORKSPACE
+                    </div>
+
+                    <h1>
+                        Track companies.<br>
+                        <span>All Here To Fetch-Fill-Placed</span>
+                    </h1>
+
+                    <p>
+                        A minimal workspace to manage companies, opportunities, applications and recruitment intelligence in one place.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a href="#companies" class="btn btn-primary">
+                    Explore Companies
+                    <span>↗</span>
+                </a>
+
+                        <button class="btn btn-secondary" onclick="openModal()">
+                    Add Company
+                    <span>+</span>
+                </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Terminal -->
+
+                <div class="terminal">
+
+                    <div class="terminal-header">
+
+                        <div class="terminal-controls">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <span class="terminal-title">
+                    recruiter@workspace CLI
+                </span>
+
+                    </div>
+
+                    <div class="terminal-body">
+
+                        <div>
+                            <span class="terminal-green">$</span>
+                            <span class="terminal-white"> recruiter status</span>
+                        </div>
+
+                        <div class="terminal-output">
+                            <span class="terminal-gray">
+                        Loading recruitment intelligence...
+                    </span>
+                        </div>
+
+                        <div class="terminal-output">
+                            <span class="terminal-green">✓</span>
+                            <span> companies loaded</span>
+                        </div>
+
+                        <div class="terminal-output">
+                            <span class="terminal-green">✓</span>
+                            <span> opportunities tracked</span>
+                        </div>
+
+                        <div class="terminal-output">
+                            <span class="terminal-green">✓</span>
+                            <span> applications synchronized</span>
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <span class="terminal-green">$</span>
+                            <span class="terminal-white cursor">_SELECT * FROM WOLRD WHERE SOMEONE LIKES YOU;</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================================
+     STATS
+========================================================= -->
+
+        <section class="stats-section">
+
+            <div class="section-heading centered">
+
+                <h2>
+                    Your recruitment
+                    <span>overview.</span>
+                </h2>
+
+                <p>
+                    Everything important about your company pipeline, available instantly.
+                </p>
+
+            </div>
+
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-label">
+                        TOTAL COMPANIES
+                    </div>
+
+                    <div class="stat-value" id="totalCompanies">
+                        0
+                    </div>
+
+                    <div class="stat-bottom">
+                        Companies tracked
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-label">
+                        ACTIVE
+                    </div>
+
+                    <div class="stat-value green-text" id="activeCompanies">
+                        0
+                    </div>
+
+                    <div class="stat-bottom">
+                        Currently recruiting
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-label">
+                        APPLICATIONS
+                    </div>
+
+                    <div class="stat-value" id="totalApplications">
+                        0
+                    </div>
+
+                    <div class="stat-bottom">
+                        Applications recorded
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-label">
+                        INTERVIEWS
+                    </div>
+
+                    <div class="stat-value" id="totalInterviews">
+                        0
+                    </div>
+
+                    <div class="stat-bottom">
+                        Interviews scheduled
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================================
+     COMPANIES
+========================================================= -->
+
+        <section class="companies-section" id="companies">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <div class="mini-label">
+                        COMPANY DATABASE
+                    </div>
+
+                    <h2>
+                        Companies
+                        <span>you track.</span>
+                    </h2>
+
+                    <p>
+                        Manage your recruitment pipeline and keep important opportunities organized.
+                    </p>
+
+                </div>
+
+                <button class="btn btn-primary" onclick="openModal()">
+            + Add Company
+        </button>
+
+            </div>
+
+
+            <!-- TOOLBAR -->
+
+            <div class="toolbar">
+
+                <div class="search-box">
+
+                    <span class="search-icon">⌕</span>
+
+                    <input type="text" id="searchInput" placeholder="Search companies..." oninput="renderCompanies()">
+
+                </div>
+
+
+                <div class="filters">
+
+                    <select id="statusFilter" onchange="renderCompanies()">
+
+                <option value="all">All Status</option>
+                <option value="active">Active</option>
+                <option value="applied">Applied</option>
+                <option value="interview">Interview</option>
+                <option value="selected">Selected</option>
+                <option value="rejected">Rejected</option>
+
+            </select>
+
+
+                    <select id="sortFilter" onchange="renderCompanies()">
+
+                <option value="name">Sort: Name</option>
+                <option value="recent">Sort: Recent</option>
+                <option value="salary">Sort: Salary</option>
+
+            </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- TABLE -->
+
+            <div class="company-table-wrapper">
+
+                <table class="company-table">
+
+                    <thead>
+
+                        <tr>
+                            <th>COMPANY</th>
+                            <th>ROLE</th>
+                            <th>LOCATION</th>
+                            <th>PACKAGE</th>
+                            <th>STATUS</th>
+                            <th>DATE</th>
+                            <th>ACTION</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="companyTableBody"></tbody>
+
+                </table>
+
+
+                <div id="emptyState" class="empty-state">
+
+                    <div class="empty-icon">&gt;_</div>
+
+                    <h3>No companies found</h3>
+
+                    <p>
+                        Add your first company to start building your recruitment database.
+                    </p>
+
+                    <button class="btn btn-primary" onclick="openModal()">
+                Add Company
+            </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================================
+     ANALYTICS
+========================================================= -->
+        <section class="analytics-section" id="analytics">
+            <div class="section-heading centered">
+
+                <div class="mini-label">
+                    <span class="label-dot"></span> INTELLIGENCE / 03
+                </div>
+
+                <h2>
+                    Our Mentor
+                    <span>Predictions.</span>
+                </h2>
+
+                <p>
+                    What we were told. What actually happened. A visual breakdown of mentor predictions, recruitment outcomes, and our learnings.
+                </p>
+
+            </div>
+
+
+            <div class="analytics-grid">
+
+
+                <!-- ================= MAYANK ================= -->
+
+                <article class="analytics-card">
+
+                    <div class="card-line line-top"></div>
+
+                    <div class="card-number">
+                        01
+                    </div>
+
+                    <div class="analytics-header">
+
+                        <div>
+                            <span class="card-eyebrow">
+                    MENTOR / PREDICTION
+                </span>
+
+                            <h3>
+                                Mayank Sir
+                            </h3>
+                        </div>
+
+                        <div class="percentage">
+                            <span id="pipelinePercent">0%</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="prediction-text">
+                        <span>“</span> Your preparation will decide how far you go.
+                        <span>”</span>
+                    </div>
+
+
+                    <div class="analytics-progress">
+
+                        <div class="progress-meta">
+                            <span>Prediction accuracy</span>
+                            <span id="pipelineProgressText">0%</span>
+                        </div>
+
+                        <div class="progress-track">
+                            <div id="pipelineProgress" class="progress-fill">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="analytics-bottom">
+
+                        <span>
+                ACTIVE APPLICATIONS
+            </span>
+
+                        <button class="analytics-btn">
+                            <a
+    href="https://wa.me/9199530 86800"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="analytics-btn"
+>
+                <span>View insight</span>
+                <span class="arrow">↗</span>
+                </a>
+            </button>
+
+                    </div>
+
+                    <div class="card-line line-bottom"></div>
+
+                </article>
+
+
+
+                <!-- ================= SUDHIRTI ================= -->
+
+                <article class="analytics-card featured">
+
+                    <div class="card-line line-top"></div>
+
+                    <div class="card-number">
+                        02
+                    </div>
+
+                    <div class="analytics-header">
+
+                        <div>
+                            <span class="card-eyebrow">
+                    MENTOR / PREDICTION
+                </span>
+
+                            <h3>
+                                Sudhirti Sen Gupta
+                            </h3>
+                        </div>
+
+                        <div class="percentage">
+                            <span id="interviewPercent">0%</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="prediction-text">
+                        <span>“</span> Every interview is a lesson before it becomes an offer.
+                        <span>”</span>
+                    </div>
+
+
+                    <div class="analytics-progress">
+
+                        <div class="progress-meta">
+                            <span>Prediction accuracy</span>
+                            <span id="interviewProgressText">0%</span>
+                        </div>
+
+                        <div class="progress-track">
+                            <div id="interviewProgress" class="progress-fill">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="analytics-bottom">
+
+                        <span>
+                INTERVIEW OUTCOMES
+            </span>
+
+                        <button class="analytics-btn">
+                            <a
+    href="https://wa.me/9195600 28877"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="analytics-btn"
+>
+                <span>View insight</span>
+                <span class="arrow">↗</span>
+                </a>
+            </button>
+
+                    </div>
+
+                    <div class="card-line line-bottom"></div>
+
+                </article>
+
+
+
+                <!-- ================= LEARNINGS ================= -->
+
+                <article class="analytics-card">
+
+                    <div class="card-line line-top"></div>
+
+                    <div class="card-number">
+                        03
+                    </div>
+
+                    <div class="analytics-header">
+
+                        <div>
+                            <span class="card-eyebrow">
+                    EXPERIENCE / LEARNING
+                </span>
+
+                            <h3>
+                                Our Learnings
+                            </h3>
+                        </div>
+
+                        <div class="percentage">
+                            <span id="selectionPercent">0%</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="prediction-text">
+                        <span>“</span> Reality teaches what predictions cannot.
+                        <span>”</span>
+                    </div>
+
+
+                    <div class="analytics-progress">
+
+                        <div class="progress-meta">
+                            <span>Learning impact</span>
+                            <span id="selectionProgressText">0%</span>
+                        </div>
+
+                        <div class="progress-track">
+                            <div id="selectionProgress" class="progress-fill">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="analytics-bottom">
+
+                        <span>
+                SELECTION LEARNINGS
+            </span>
+
+                        <button class="analytics-btn">
+                            
+               <a href="#dashboard" class="analytics-btn">
+    <span>Let's Grab it together</span>
+    <span class="arrow">↗</span>
+</a>
+            </button>
+
+                    </div>
+
+                    <div class="card-line line-bottom"></div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================================
+     OPEN SOURCE / INFO
+========================================================= -->
+
+        <section class="info-section">
+
+            <div class="info-inner">
+
+                <div class="info-title">
+
+                    <h2>
+                        Built for
+                        <span>developers.</span>
+                    </h2>
+
+                </div>
+
+                <div class="info-content">
+
+                    <p>
+                        RECRUITER is a lightweight recruitment workspace designed to keep your job search structured, searchable and completely under your control.
+                    </p>
+
+                    <div class="info-actions">
+
+                        <button class="btn btn-secondary" onclick="exportData()">
+                    Export JSON ↗
+                </button>
+
+                        <label class="btn btn-secondary import-label">
+
+                    Import JSON ↗
+
+                    <input
+                        type="file"
+                        id="importFile"
+                        accept=".json"
+                        onchange="importData(event)"
+                    >
+
+                </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+     FOOTER
+========================================================= -->
+
+    <footer>
+
+        <div class="footer-top">
+
+            <!-- FOOTER BRAND -->
+            <div class="footer-brand">
+
+                <div class="footer-brand-header">
+
+                    <!-- Small Footer Logo Image -->
+                    <div class="footer-logo-image">
+                        <img src="./images/logo.jpg" alt="RECRUITER Logo">
+                    </div>
+
+                    <!-- Brand Name -->
+                    <div class="footer-logo">
+                        &gt;_ RECRUITER
+                    </div>
+
+                </div>
+
+                <p>
+                    Company intelligence and recruitment tracking for developers.
+                </p>
+
+            </div>
+
+
+            <!-- PRODUCT -->
+            <div class="footer-column">
+
+                <h4>PRODUCT</h4>
+
+                <a href="#dashboard">Dashboard</a>
+                <a href="#companies">Companies</a>
+                <a href="#analytics">Analytics</a>
+
+            </div>
+
+
+            <!-- TOOLS -->
+            <div class="footer-column">
+
+                <h4>TOOLS</h4>
+
+                <a href="#" onclick="exportData(); return false;">
+                Export Data
+            </a>
+
+                <a href="#" onclick="openModal(); return false;">
+                Add Company
+            </a>
+
+            </div>
+
+
+            <!-- SYSTEM -->
+            <div class="footer-column">
+
+                <h4>SYSTEM</h4>
+
+                <span>Local Storage</span>
+                <span>Offline Ready</span>
+                <span>v1.0.0</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+
+            <span>
+            © 2026 @DhayalDhruv | All rights reserved |
+            Built for One Fetch Centralized Fetching Data.
+        </span>
+
+            <span class="footer-status">
+            <span class="status-dot"></span> SYSTEM ONLINE
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <style>
+        /* =========================================================
+   FOOTER
+========================================================= */
+        
+        footer {
+            width: 100%;
+            background: #050505;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            color: #ffffff;
+        }
+        /* =========================================================
+   FOOTER TOP
+========================================================= */
+        
+        .footer-top {
+            max-width: 1400px;
+            margin: auto;
+            padding: 55px 6% 45px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 50px;
+        }
+        /* =========================================================
+   BRAND
+========================================================= */
+        
+        .footer-brand {
+            max-width: 360px;
+        }
+        /* Logo + Text */
+        
+        .footer-brand-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+        /* =========================================================
+   SMALL FOOTER IMAGE
+========================================================= */
+        
+        .footer-logo-image {
+            width: 42px;
+            height: 42px;
+            flex-shrink: 0;
+            padding: 3px;
+            border-radius: 11px;
+            background: rgba(255, 255, 255, 0.035);
+            border: 1px solid rgba(0, 255, 140, 0.18);
+            overflow: hidden;
+            box-shadow: 0 0 12px rgba(0, 255, 140, 0.08), inset 0 0 12px rgba(0, 255, 140, 0.04);
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        /* Image */
+        
+        .footer-logo-image img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        /* Image Hover */
+        
+        .footer-logo-image:hover {
+            transform: translateY(-2px) scale(1.06);
+            border-color: rgba(0, 255, 140, 0.55);
+            box-shadow: 0 0 12px rgba(0, 255, 140, 0.22), 0 0 30px rgba(0, 255, 140, 0.10), inset 0 0 14px rgba(0, 255, 140, 0.06);
+        }
+        
+        .footer-logo-image:hover img {
+            transform: scale(1.08);
+            filter: brightness(1.12) saturate(1.1);
+        }
+        /* =========================================================
+   FOOTER LOGO TEXT
+========================================================= */
+        
+        .footer-logo {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+            font-size: 20px;
+            font-weight: 650;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+        
+        .footer-brand-header:hover .footer-logo {
+            color: #00ff8c;
+            text-shadow: 0 0 10px rgba(0, 255, 140, 0.22);
+        }
+        /* =========================================================
+   BRAND DESCRIPTION
+========================================================= */
+        
+        .footer-brand p {
+            margin: 0;
+            color: #777777;
+            font-size: 14px;
+            line-height: 1.7;
+            max-width: 330px;
+        }
+        /* =========================================================
+   FOOTER COLUMNS
+========================================================= */
+        
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .footer-column h4 {
+            margin: 0 0 10px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: #666666;
+        }
+        /* Links + System text */
+        
+        .footer-column a,
+        .footer-column span {
+            color: #999999;
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.25s ease, transform 0.25s ease;
+        }
+        /* Hover */
+        
+        .footer-column a:hover {
+            color: #00ff8c;
+            transform: translateX(4px);
+        }
+        /* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+        
+        .footer-bottom {
+            max-width: 1400px;
+            margin: auto;
+            padding: 20px 6%;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            color: #555555;
+            font-size: 11px;
+        }
+        /* =========================================================
+   SYSTEM STATUS
+========================================================= */
+        
+        .footer-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #777777;
+            font-size: 10px;
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+        /* Status Dot */
+        
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #00ff8c;
+            box-shadow: 0 0 7px rgba(0, 255, 140, 0.8), 0 0 15px rgba(0, 255, 140, 0.35);
+            animation: statusPulse 2s ease-in-out infinite;
+        }
+        /* =========================================================
+   STATUS ANIMATION
+========================================================= */
+        
+        @keyframes statusPulse {
+            0%,
+            100% {
+                opacity: 0.6;
+                transform: scale(0.9);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.15);
+            }
+        }
+        /* =========================================================
+   RESPONSIVE
+========================================================= */
+        
+        @media (max-width: 900px) {
+            .footer-top {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .footer-top {
+                grid-template-columns: 1fr;
+                padding: 40px 7%;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 18px 7%;
+                line-height: 1.6;
+            }
+            .footer-logo-image {
+                width: 150px;
+                height: 150px;
+            }
+            .footer-logo {
+                font-size: 18px;
+            }
+        }
+    </style>
+
+
+    <style>
+        /* =========================================================
+   RECRUITER — APPLY + THEME TOGGLE ONLY
+========================================================= */
+        
+        .company-apply-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            min-width: 92px;
+            padding: 9px 15px;
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            border-radius: 999px;
+            background: #ffffff;
+            color: #050505 !important;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 1;
+            text-decoration: none !important;
+            white-space: nowrap;
+            cursor: pointer;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.16);
+            transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+        }
+        
+        .company-apply-btn:hover {
+            background: #f1f1f1;
+            color: #000000 !important;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+        }
+        
+        .theme-toggle {
+            position: fixed;
+            right: 26px;
+            bottom: 26px;
+            z-index: 99999;
+            width: 64px;
+            height: 64px;
+            padding: 0;
+            border: 1px solid rgba(255, 255, 255, .18);
+            border-radius: 50%;
+            background: #ffffff;
+            color: #111111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            line-height: 1;
+            cursor: pointer;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, .35);
+            transition: transform .25s ease, background .25s ease, color .25s ease;
+        }
+        
+        .theme-toggle:hover {
+            transform: scale(1.08) translateY(-2px);
+        }
+        
+        .theme-toggle:active {
+            transform: scale(.96);
+        }
+        /* Light mode visibility */
+        
+        body[data-theme="light"] {
+            background: #f7f7f7 !important;
+            color: #111111 !important;
+        }
+        
+        body[data-theme="light"] .navbar,
+        body[data-theme="light"] .stat-card,
+        body[data-theme="light"] .company-table-wrapper,
+        body[data-theme="light"] .analytics-card,
+        body[data-theme="light"] .terminal,
+        body[data-theme="light"] .info-section,
+        body[data-theme="light"] .modal {
+            background: #ffffff !important;
+            color: #111111 !important;
+        }
+        
+        body[data-theme="light"] .grid-background {
+            opacity: .12;
+        }
+        
+        body[data-theme="light"] .nav-links a,
+        body[data-theme="light"] .brand,
+        body[data-theme="light"] .section-heading h2,
+        body[data-theme="light"] .stat-value,
+        body[data-theme="light"] .company-table td,
+        body[data-theme="light"] .analytics-card h3,
+        body[data-theme="light"] .info-title h2,
+        body[data-theme="light"] .modal h2,
+        body[data-theme="light"] label {
+            color: #111111 !important;
+        }
+        
+        body[data-theme="light"] .nav-links a:hover,
+        body[data-theme="light"] .brand:hover {
+            color: #00a86b !important;
+        }
+        
+        body[data-theme="light"] .section-heading p,
+        body[data-theme="light"] .stat-bottom,
+        body[data-theme="light"] .analytics-card span,
+        body[data-theme="light"] .info-content p,
+        body[data-theme="light"] .footer-brand p {
+            color: #555555 !important;
+        }
+        
+        body[data-theme="light"] .company-table th {
+            color: #555555 !important;
+            background: #f3f3f3 !important;
+        }
+        
+        body[data-theme="light"] .company-table tr {
+            border-color: rgba(0, 0, 0, .08) !important;
+        }
+        
+        body[data-theme="light"] input,
+        body[data-theme="light"] select {
+            background: #ffffff !important;
+            color: #111111 !important;
+            border-color: rgba(0, 0, 0, .15) !important;
+        }
+        
+        body[data-theme="light"] input::placeholder {
+            color: #888888 !important;
+        }
+        
+        body[data-theme="light"] .terminal {
+            border-color: rgba(0, 0, 0, .12) !important;
+        }
+        
+        body[data-theme="light"] .terminal-white {
+            color: #111111 !important;
+        }
+        
+        body[data-theme="light"] .terminal-gray {
+            color: #666666 !important;
+        }
+        
+        body[data-theme="light"] footer {
+            background: #ffffff !important;
+            color: #111111 !important;
+            border-top-color: rgba(0, 0, 0, .08) !important;
+        }
+        
+        body[data-theme="light"] .footer-logo,
+        body[data-theme="light"] .footer-column a:hover {
+            color: #00a86b !important;
+        }
+        
+        body[data-theme="light"] .footer-column a,
+        body[data-theme="light"] .footer-column span,
+        body[data-theme="light"] .footer-status {
+            color: #666666 !important;
+        }
+        
+        body[data-theme="light"] .theme-toggle {
+            background: #111111;
+            color: #ffffff;
+            border-color: rgba(0, 0, 0, .15);
+        }
+        
+        @media (max-width: 600px) {
+            .theme-toggle {
+                width: 56px;
+                height: 56px;
+                right: 18px;
+                bottom: 18px;
+                font-size: 24px;
+            }
+            .company-apply-btn {
+                min-width: 78px;
+                padding: 8px 11px;
+                font-size: 11px;
+            }
+        }
+    </style>
+
+    <!-- =========================================================
+     MODAL
+========================================================= -->
+
+    <div class="modal-overlay" id="modal">
+
+        <div class="modal">
+
+            <div class="modal-header">
+
+                <div>
+                    <div class="mini-label">RECRUITMENT DATABASE</div>
+                    <h2 id="modalTitle">Add Company</h2>
+                </div>
+
+                <button class="close-button" onclick="closeModal()">
+                ×
+            </button>
+
+            </div>
+
+
+            <form id="companyForm" onsubmit="saveCompany(event)">
+
+                <input type="hidden" id="companyId">
+
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>Company Name</label>
+
+                        <input type="text" id="companyName" placeholder="e.g. Google" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Role</label>
+
+                        <input type="text" id="companyRole" placeholder="e.g. Software Engineer" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Location</label>
+
+                        <input type="text" id="companyLocation" placeholder="e.g. Bangalore, India">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Package</label>
+
+                        <input type="text" id="companySalary" placeholder="e.g. 12 LPA">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Status</label>
+
+                        <select id="companyStatus">
+
+                        <option value="active">Active</option>
+                        <option value="applied">Applied</option>
+                        <option value="interview">Interview</option>
+                        <option value="selected">Selected</option>
+                        <option value="rejected">Rejected</option>
+
+                    </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Application Date</label>
+
+                        <input type="date" id="companyDate">
+
+                    </div>
+
+                </div>
+
+
+                <div class="modal-actions">
+
+                    <button type="button" class="btn btn-secondary" onclick="closeModal()">
+                    Cancel
+                </button>
+
+                    <button type="submit" class="btn btn-primary">
+                    Save Company
+                </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- THEME TOGGLE -->
+    <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch theme">
+        <span id="themeIcon">☀️</span>
+    </button>
+
+    <!-- =========================================================
+     TOAST
+========================================================= -->
+
+    <div id="toast" class="toast">
+        <span class="toast-icon">✓</span>
+        <span id="toastMessage">Saved successfully</span>
+    </div>
+
+
+    <script src="script.js"></script>
+
+
+    <script>
+        /* =========================================================
+                                                                                           APPLY BUTTONS + THEME TOGGLE
+                                                                                        ========================================================= */
+        (function() {
+            const careerLinks = {
+                "accenture": "https://www.accenture.com/in-en/careers",
+                "amazon": "https://www.amazon.jobs/",
+                "ibm": "https://www.ibm.com/careers",
+                "microsoft": "https://careers.microsoft.com/"
+                    //add for the further companies link which you want to add the apply button
+            };
+
+            function addApplyButtons() {
+                const tbody = document.getElementById("companyTableBody");
+                if (!tbody) return;
+
+                tbody.querySelectorAll("tr").forEach(row => {
+                    const actionBox = row.querySelector(".action-buttons");
+                    if (!actionBox || actionBox.querySelector(".company-apply-btn")) return;
+
+                    const nameElement = row.querySelector(".company-name span");
+                    if (!nameElement) return;
+
+                    const companyName = nameElement.textContent.trim();
+                    const key = companyName.toLowerCase();
+                    const link = careerLinks[key];
+
+                    if (!link) return;
+
+                    const apply = document.createElement("a");
+                    apply.className = "company-apply-btn";
+                    apply.href = link;
+                    apply.target = "_blank";
+                    apply.rel = "noopener noreferrer";
+                    apply.title = "Apply at " + companyName;
+                    apply.innerHTML = "Apply <span>↗</span>";
+
+                    actionBox.prepend(apply);
+                });
+            }
+
+            function applyTheme(theme) {
+                document.body.setAttribute("data-theme", theme);
+
+                const icon = document.getElementById("themeIcon");
+                const button = document.getElementById("themeToggle");
+
+                if (theme === "light") {
+                    if (icon) icon.textContent = "🌙";
+                    if (button) {
+                        button.setAttribute("aria-label", "Switch to dark mode");
+                        button.setAttribute("title", "Switch to dark mode");
+                    }
+                } else {
+                    if (icon) icon.textContent = "☀️";
+                    if (button) {
+                        button.setAttribute("aria-label", "Switch to light mode");
+                        button.setAttribute("title", "Switch to light mode");
+                    }
+                }
+
+                localStorage.setItem("recruiter_theme", theme);
+            }
+
+            document.addEventListener("DOMContentLoaded", function() {
+                const savedTheme = localStorage.getItem("recruiter_theme") || "dark";
+                applyTheme(savedTheme);
+
+                const themeButton = document.getElementById("themeToggle");
+                if (themeButton) {
+                    themeButton.addEventListener("click", function() {
+                        const current = document.body.getAttribute("data-theme") || "dark";
+                        applyTheme(current === "dark" ? "light" : "dark");
+                    });
+                }
+
+                addApplyButtons();
+
+                const tbody = document.getElementById("companyTableBody");
+                if (tbody) {
+                    const observer = new MutationObserver(addApplyButtons);
+                    observer.observe(tbody, {
+                        childList: true,
+                        subtree: true
+                    });
+                }
+            });
+        })();
+    </script>
+
+</body>
+
+</html>
+<script src="script.js"></script>
+
+</body>
+
+</html>
+
+</html>
