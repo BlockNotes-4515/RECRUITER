@@ -60,6 +60,8 @@ RECRUITER is designed around a simple idea:
 
 The project aims to provide a practical and extensible foundation that can eventually evolve into a comprehensive recruitment intelligence platform.
 
+
+<img src="structure.png" alt="Complete Structur given here">
 <hr>
 
 ## Features
