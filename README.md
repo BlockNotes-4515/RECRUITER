@@ -108,37 +108,32 @@ Interview
 Selected / Rejected
 
 ```
-<hr>
 
 ---
 
 <p align="center">
-  <img src="images/logo.jpg" alt="RECRUITER" width="60">
-</p>
-
-<h3 align="center">RECRUITER</h3>
-
-<p align="center">
-  Modern recruitment intelligence for tracking companies, opportunities,
-  hiring pipelines, and recruitment analytics.
+  <img src="images/logo.jpg" alt="RECRUITER" width="45">
+  <br>
+  <strong>RECRUITER</strong>
 </p>
 
 <p align="center">
-  <a href="CONTRIBUTING.md">Contributing</a>
-  ·
-  <a href="SECURITY.md">Security</a>
-  ·
-  <a href="#roadmap">Roadmap</a>
-  ·
-  <a href="#discussions-and-ideas">Discussions</a>
+  <i>“Recruitment intelligence, organized.”</i>
 </p>
 
 <p align="center">
-  <sub>
-    RECRUITER is an open and evolving project. Contributions, ideas,
-    feedback, and improvements are welcome.
-  </sub>
+  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/Contribute-2563EB?style=flat-square" alt="Contribute"></a>
+  <a href="SECURITY.md"><img src="https://img.shields.io/badge/Security-DC2626?style=flat-square" alt="Security"></a>
+  <a href="#roadmap"><img src="https://img.shields.io/badge/Roadmap-7C3AED?style=flat-square" alt="Roadmap"></a>
 </p>
+
+<p align="center">
+  <sub>© 2026 RECRUITER · Built for smarter recruitment.</sub>
+</p>
+
+---
+
+
 
 <p align="center">
   <sub>
