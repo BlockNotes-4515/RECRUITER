@@ -62,7 +62,7 @@ The project aims to provide a practical and extensible foundation that can event
 
 
 <p align="center">
-  <img src="Structure.png" alt="Complete Structure given here" width="800">
+  <img src="images/Structure.png" alt="Complete Structure given here" width="800">
 </p>
 <hr>
 
